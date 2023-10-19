@@ -6,10 +6,34 @@
 .container{
     display: flex;
     flex-direction: column;
-    margin-top: 1.3rem;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 2px 2px silver;
+    padding: 0.9rem;
+}
+ul{
+    list-style: none;
 }
 .container li{
     margin-top: 1.6rem;
-    font-size: 18px;
+    font-size: clamp(0.9em, 2vw, 1.1em);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 1px 1px 2px 2px rgb(243, 237, 226);
+    border-radius: 9px;
+    padding: 1em;
+}
+input[type="text"]{
+    height: 33px;
+    width: 50px;
+    border: 1px groove ;
+    box-shadow: 1px 1px 2px 2px rgb(214, 193, 154);
+    text-align: center;
+    margin-left: 5px;
+    font-size: 15px;
+}
+input[type="text"]:focus{
+    outline: none;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
 }

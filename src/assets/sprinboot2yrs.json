@@ -5,13 +5,122 @@
     },
     {
         "q2":"Q2. Explain the difference between @Autowired and @Resource.",
-        "a2":"Both annotations are used for dependency injection in Spring. \n@Autowired: It's Spring's own annotation. It can be used to autowire bean on setter methods, instance variables, and constructors. By default, it uses type-based injection. \n@Resource: This is a part of the JSR-250 specification. It uses name-based autowiring. It can be mentioned using the 'name' attribute."
+        "a2":"Both annotations are used for dependency injection in Spring. \n<strong>@Autowired</strong>: It's Spring's own annotation. It can be used to autowire bean on setter methods, instance variables, and constructors. By default, it uses type-based injection. \n<strong>@Resource:</strong> This is a part of the JSR-250 specification. It uses name-based autowiring. It can be mentioned using the 'name' attribute."
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+        "q3":"Q3. What is the difference between an embedded server and a standard server?",
+        "a3":"An embedded server is packaged within the application, meaning the server runs within the same JVM as the application. Spring Boot applications can embed Tomcat, Jetty, or Undertow directly. On the other hand, a standard server runs separately and requires the application to be deployed to it."
+    },
+    {
+        "q4":"Q4. What are Spring Boot starters, and can you name a few?",
+        "a4":"Starters are a set of convenient dependency descriptors that you can include in your application. They help you get a Maven dependency for a particular feature without searching for individual dependencies. Examples include: \n<strong>spring-boot-starter-web (for web applications)</strong>  \n<strong>spring-boot-starter-data-jpa (for JPA applications)</strong> \n<strong>spring-boot-starter-security (for adding security).</strong>"
+    },
+    {
+        "q5":"Q5. Explain the actuator module in Spring Boot.",
+        "a5":"Spring Boot Actuator provides production-ready features for Spring Boot applications. It allows you to monitor and manage your application with endpoints like health, metrics, info, dump, env, etc. These are very helpful when pushing your application to production."
+    },
+    {
+        "q6":"Q6. How can you customize Spring Boot banners?",
+        "a6":"The Spring Boot banner can be customized by adding a banner.txt file in the resources directory. For a more advanced customization, like colorizing output, you can create a banner.gif, banner.jpg, or banner.png image file."
+    },
+    {
+        "q7":"Q7. What is the role of @SpringBootApplication annotation?",
+        "a7":" It's a convenience annotation equivalent to declaring @Configuration, @EnableAutoConfiguration, and @ComponentScan. It's usually placed on the main class."
+    },
+    {
+        "q8":"Q8. How can you override default properties in Spring Boot?",
+        "a8":"Spring Boot allows multiple ways to override default properties: Using application.properties or application.yml in the resources directory.\n1.Using command-line arguments.\n2.Using environment variables.\n3.Using external configuration files using spring.config.location."
+    },
+    {
+        "q9":"Q9. Explain how Spring Boot handles database migrations.",
+        "a9":"Spring Boot can handle database migrations using tools like Flyway or Liquibase. By simply adding the respective starter (spring-boot-starter-data-jpa with either flyway-core or liquibase-core), and placing the migration scripts in the default locations, Spring Boot will automatically manage the database schema evolution when the application starts."
+    },
+    {
+        "q10":"Q10. How can you enable HTTPS in a Spring Boot web application?",
+        "a10":"Enabling HTTPS in Spring Boot can be done by: \n1. Obtaining an SSL certificate. \n2. Configuring Spring Boot's embedded Tomcat to use the certificate. \n3. Updating the application.properties or application.yml with the key-store path, password, and the type of key-store."
+    },
+    {
+        "q11":"Q11. How does Spring Boot handle profile-specific properties?",
+        "a11":"Spring Boot uses profiles to enable different configurations for different environments. You can have profile-specific properties by using the naming convention application-{profile}.properties or application-{profile}.yml. You can then activate a profile using the spring.profiles.active property or by using the @ActiveProfiles annotation in tests."
+    },
+    {
+        "q12":"Q12. Explain @EntityScan and @ComponentScan annotations.",
+        "a12":"@EntityScan: Used by Spring Boot when we want to specify the base packages for scanning JPA entities. This is useful when the entities are in a different package than the main application. @ComponentScan: It tells Spring where to search for components, configurations, and services. By default, Spring Boot scans only the package where your main application class is located."
+    },
+    {
+        "q13":"Q13. How can you define properties in a type-safe manner in Spring Boot?",
+        "a13":"You can use @ConfigurationProperties to bind property values in a type-safe manner. This allows properties to be grouped together and validated using bean validation. The properties can be defined in application.properties or application.yml and then bound to Java objects for better type safety and structured configuration."
+    },
+    {
+        "q14":"Q14. How does Spring Boot handle AOP (Aspect Oriented Programming)?",
+        "a14":"Spring Boot has built-in support for aspect-oriented programming, allowing for the modularization of concerns like transaction management. By including the spring-boot-starter-aop dependency and using annotations like @Aspect and @Around, you can define pointcuts and advices to add behavior to selected join points in your application."
+    },
+    {
+        "q15":"Q15. Describe the difference between @Controller and @RestController in Spring Boot.",
+        "a15":"@Controller: It's a standard Spring annotation that denotes a class as a web controller. It's generally used with view resolvers and returns views (like JSP, Thymeleaf). @RestController: It's a specialized version of the controller which includes @Controller and @ResponseBody. This means that a @RestController returns a response body directly without the need for view resolvers. It's typically used for RESTful web services."
+    },
+    { 
+        "q16":"Q16. What is YAML in the context of Spring Boot?",
+        "a16":"YAML (YAML Ain't Markup Language) is a human-readable data serialization standard. In the context of Spring Boot, YAML can be an alternative to the traditional .properties file format. It's especially helpful when dealing with hierarchical configuration data."
+    },
+    {
+        "q17":"Q17. What's the role of @SpringBootTest annotation?",
+        "a17":"@SpringBootTest is used to indicate that the context under test is a Spring Boot application. It loads the full application context and also configures a TestRestTemplate which can be used to send HTTP requests to the application being tested."
+    },
+    {
+        "q18":"Q18. How does Spring Boot support data caching?",
+        "a18":"Spring Boot provides support for caching through a variety of cache providers (e.g., EhCache, Redis, Hazelcast) using the Spring Cache abstraction. By including the right cache starter and using annotations like @EnableCaching, @Cacheable, @CachePut, and @CacheEvict, you can add caching capabilities to your application."
+    },
+    {
+        "q19":"Q19. How can you handle exceptions in a Spring Boot RESTful web service?",
+        "a19":"Exceptions in Spring Boot RESTful web services can be handled using the @ControllerAdvice and @ExceptionHandler annotations. This allows you to define global exception handling logic that can return custom error responses."
+    },
+    {
+        "q20":"Q20. What's the significance of the spring-boot-starter-parent in a Spring Boot project?",
+        "a20":"The spring-boot-starter-parent is a special starter that provides useful Maven defaults. It allows for the easier setup of a Maven project by offering dependency management, default configurations, and plugin configurations. By inheriting from this parent POM, projects can ensure a consistent setup and version management."
+      },
+    
+        {
+          "q21": "Q21. How can you schedule tasks in Spring Boot?",
+          "a21": "Spring Boot provides support for task scheduling using the @Scheduled annotation along with enabling it with @EnableScheduling on a configuration class. You can use cron expressions, fixed rates, or fixed delays to specify the task execution frequency."
+        },
+        {
+          "q22": "Q22. How can you configure multiple data sources in a Spring Boot application?",
+          "a22": "To configure multiple data sources, you'll typically define additional DataSource, EntityManagerFactory, and TransactionManager beans. You'll then use the @Primary annotation to denote the primary data source and utilize properties namespacing (like spring.datasource.primary.* and spring.datasource.secondary.*) for distinct configurations."
+        },
+        {
+          "q23": "Q23. How does Spring Boot handle logging?",
+          "a23": "Spring Boot uses Commons Logging for all its internal logging but leaves the underlying log implementation open. By default, if you use the Starters, Logback will be used for logging. You can also use other log implementations. Configuration can be handled via the application.properties or logback-spring.xml files."
+        },
+        {
+          "q24": "Q24. What are the health indicators in Spring Boot Actuator, and can you create a custom one?",
+          "a24": "Health indicators are components that check the status of a specific part of your application or system (e.g., database connectivity, disk space). Some built-in indicators are DataSourceHealthIndicator, DiskSpaceHealthIndicator, etc. To create a custom health indicator, you'd implement the HealthIndicator interface and override the health() method."
+        },
+        {
+          "q25": "Q25. Describe the difference between @RequestParam and @PathVariable in Spring Boot.",
+          "a25": "@RequestParam: Used to extract query parameters (or form data) from the URL. For instance, in /users?id=5, the value 5 can be obtained using @RequestParam. @PathVariable: Used to extract values from the URI path. For example, in /users/5, the value 5 can be extracted using @PathVariable."
+        },
+        {
+          "q26": "Q26. What is a Spring Boot fat JAR?",
+          "a26": "A Spring Boot fat JAR, often referred to as an \"uber JAR\", is a JAR file that contains all the dependencies required for a Spring Boot application to run. It's designed to be self-contained and deployable."
+        },
+        {
+          "q27": "Q27. What are cross-origin requests, and how can you handle them in Spring Boot?",
+          "a27": "Cross-origin requests are HTTP requests made from a domain different than the one serving the application. By default, web browsers restrict requests to the same origin for security reasons. In Spring Boot, you can handle them using the @CrossOrigin annotation or by configuring a CorsFilter to define CORS mappings."
+        },
+        {
+          "q28": "Q28. How can you serve static content, like HTML, CSS, or images, in Spring Boot?",
+          "a28": "By default, Spring Boot serves static content from a directory called /static (or /public, /resources, /META-INF/resources) located in the classpath root. You just need to place your static files in any of these directories."
+        },
+        {
+          "q29": "Q29. Describe the difference between traditional deployment and a Spring Boot jar deployment.",
+          "a29": "Traditional deployment often involves packaging the application as a WAR file and deploying it to an external application server (like Tomcat). In Spring Boot jar deployment, the application is packaged as a standalone JAR with an embedded server (like Tomcat, Jetty), allowing the application to run independently without needing an external server."
+        },
+        {
+          "q30": "Q30. How can you secure a RESTful API in Spring Boot?",
+          "a30": "You can use Spring Security, a powerful and customizable authentication and access-control framework. By including the spring-boot-starter-security dependency, you can secure your endpoints using annotations (@Secured or @PreAuthorize), configure authentication mechanisms, and define user roles and permissions."
+        }
+      
+      
+      
 ]
