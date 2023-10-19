@@ -1,0 +1,29 @@
+
+<!-- the below code is trying to turn arrow manually since same thing will be achieved using details and summary to it is now commented
+
+<div class="exp-yrs">
+    <div (click)="toggleList()">
+      Year Of Experience 
+      <span [style.transform]="isExpanded ? 'rotate(90deg)' : 'rotate(0deg)'">>></span>
+    </div>
+    
+    <ul *ngIf="isExpanded">
+      <li>2yrs</li>
+      <li>3yrs</li>
+      <li>4yrs</li>
+      <li>5yrs</li>
+    </ul>
+  </div>
+
+-->
+
+  <details>
+  <summary>Spring-Boot Year Of Experience</summary>
+  <ul>
+    <li routerLink="/springboot/2yrs">2yrs</li>
+    <li>3yrs</li>
+    <li>4yrs</li>
+    <li>5yrs</li>
+    <li>6yrs</li>
+  </ul>
+</details>

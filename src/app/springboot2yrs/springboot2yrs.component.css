@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.3rem;
+}
+.container li{
+    margin-top: 1.6rem;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

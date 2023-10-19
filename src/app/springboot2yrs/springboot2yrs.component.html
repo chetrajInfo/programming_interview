@@ -1,0 +1,9 @@
+<div class="container">
+    <ul>
+      <li *ngFor="let faq of faqs">
+        <strong>{{ faq.question }}</strong> 
+        <p [innerHTML]="faq.answer"></p> 
+      </li>
+    </ul>
+  </div>
+  
