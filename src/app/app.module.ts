@@ -10,6 +10,7 @@ import { Springboot2yrsComponent } from './springboot2yrs/springboot2yrs.compone
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainpageComponent,
     CorejavaComponent,
     SpringbootComponent,
-    Springboot2yrsComponent
+    Springboot2yrsComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
