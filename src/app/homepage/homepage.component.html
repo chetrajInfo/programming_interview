@@ -30,3 +30,45 @@
 <div class="img-fanng">
     <img src="./assets/fanng.jpg" alt="FAANG Logo">
 </div>
+
+<section class="con-us">
+   <p>
+    Struggling with interview prep? Dive into our comprehensive Q&A platform.<br> For any queries, don't hesitate to connect with us!"
+   </p>
+   <div class="con-btn">
+      <button>Connect</button>
+   </div>
+</section>
+
+<div id="prp-int">
+     <label for="info">Article that build confidence in Interview.</label>
+</div>
+<div class="img-art-container">
+    <div class="img-art-int">
+        <img src="./assets/interview1.jpg" alt="Spring"><span class="txt">How to prepare for Job Interview So they are Convince.</span>
+      </div>
+      <div class="img-art-int">
+         <img src="./assets/rules.jpg" alt="Spring"><span class="txt">Strong 6 rules that need to follow to impress recuirter.</span>
+       </div>
+       <div class="img-art-int">
+         <img src="./assets/whentosay.jpg" alt="Spring"><span class="txt">Right preparation when and what to saying during interview.</span>
+       </div>
+</div>
+<div class="soft-skill">
+  <img src="./assets/softskill.jpg" alt="Soft Skill">
+  <div class="skill-set">
+     <a *ngFor="let link of links" [href]="link.url">{{link.title}}</a>
+  </div>
+</div>
+
+<div class="video-container">
+    <h2>Some Useful Video Links that can assist in your hardwork.</h2>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=kepV3f5d8r0">"Mastering Behavioral Interview Questions"</a> - This video provides insights into the STAR method and how to tackle behavioral questions effectively.</li>
+        <li><a href="https://www.youtube.com/watch?v=Y3KZU3fdZkQ">"How to Answer Technical Questions"</a> - Whether you're from a technical background or not, this video offers great tips on breaking down complex problems.</li>
+        <li><a href="https://www.youtube.com/watch?v=ZmZmzp9QSbg">"Body Language Tips for Interviews"</a> - Mastering non-verbal cues can be just as important as the answers you provide. Get some professional insights here.</li>
+        <li><a href="https://www.youtube.com/watch?v=s1PfOsH0Ys8">"Understanding the Interviewer's Perspective"</a> - Dive into the other side of the table and understand what interviewers are really looking for.</li>
+        <li><a href="https://www.youtube.com/watch?v=b56OLfkbAn8">"Negotiating Your Job Offer"</a> - Once you've cracked the interview, it's essential to know how to negotiate your package effectively. Learn the art of negotiation with this video.</li>
+    </ul>
+   
+</div>

@@ -1,0 +1,99 @@
+To create a responsive footer with social media icons and an additional link for your website's interview questions and answers, 
+you can use the Angular framework along with the Angular Material library for UI components and icons. Here's how you can go about it:
+
+1. Setup Angular and Angular Material:
+If you haven't set up Angular Material yet:
+
+ng add @angular/material
+
+2. Import Modules:
+
+In your app.module.ts, make sure to import the necessary modules:
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+@NgModule({
+  ...
+  imports: [
+    ...
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule
+  ],
+  ...
+})
+
+3. Component Creation:
+Generate a new footer component:
+
+ng generate component footer
+4. Add Social Media Icons:
+For demonstration, let's add icons for Facebook, Twitter, and LinkedIn.
+ Ensure you have these icons or you can use icons from Angular Material's icon set.
+ You can also use other icon libraries like Font Awesome.
+
+Inside footer.component.html:
+
+<div class="footer">
+  <mat-toolbar>
+    <span class="spacer"></span>
+
+    <!-- Social Media Icons -->
+    <a href="https://facebook.com" target="_blank" mat-icon-button>
+      <mat-icon>facebook</mat-icon>
+    </a>
+    <a href="https://twitter.com" target="_blank" mat-icon-button>
+      <mat-icon>twitter</mat-icon>
+    </a>
+    <a href="https://linkedin.com" target="_blank" mat-icon-button>
+      <mat-icon>linkedin</mat-icon>
+    </a>
+
+    <!-- Additional Link -->
+    <a href="/interview-questions" class="additional-link">
+      Interview Questions & Answers
+    </a>
+  </mat-toolbar>
+</div>
+
+
+5. CSS for Responsiveness:
+In footer.component.css:
+
+.footer {
+  width: 100%;
+  position: relative;
+}
+
+mat-toolbar {
+  justify-content: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.additional-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .additional-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+This CSS makes the footer take the full width of its container and positions the social icons
+ and additional link in the center. It also includes a responsive breakpoint for smaller screens,
+  making the additional link appear below the icons and centered.
+
+6. Using the Footer:
+Now, you can use the footer in your app by adding the following line where you want it to appear:
+
+<app-footer></app-footer>

@@ -62,6 +62,85 @@ button{
     width: 30vw;
     height: 10vh;
 }
+
+.con-us{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.2em, 2vw, 1.6em);
+    color: white;
+    background-color: rgb(177, 177, 229);
+    gap:3rem;
+}
+
+.con-btn button{
+    height: 5vh;
+    border-color: rgb(165, 78, 78);
+    border-radius: 14px;
+    background-color: rgb(255, 255, 255);
+}
+
+#prp-int{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+label[for="info"]{ 
+    font-size: clamp(1.1em, 2vw, 1.7em);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.img-art-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem
+}
+.img-art-int{
+    max-width: 12rem;
+    text-align: justify;
+    border: 1px solid silver;
+    padding: 1rem;
+}
+.txt{
+    font-size: 15px;
+    font-family: cursive;
+    text-align: justify;
+}
+.img-art-int img{
+    height: 9vh;
+    width: 10vw;
+    margin-right: 1.2rem;
+    align-items: center;
+}
+
+.soft-skill{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+   gap:4rem;
+}
+.soft-skill img{
+    height: 39vh;
+    width: 36vw;
+}
+.skill-set{
+    display: flex;
+    flex-direction: column;
+    line-height: 2.9vh;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+.video-container{
+    padding:2rem;
+}
+
+ul li{
+    line-height: 2rem;
+}
+
 @media screen and (max-width:800px) {
     .img-row{
         margin:auto;
@@ -80,9 +159,25 @@ button{
       border: 1px solid blueviolet;
       border-radius: 5px;
     }
+
+    .soft-skill img{
+       margin: auto;
+       width: 100%;
+        padding: auto;
+    }
+  
 }
 @media screen and (max-width:600px) {
     img{
         height: 18vh; width: 18vw;
     }
+    .txt{
+        font-size: 12px;
+    }
+    .img-art-container{
+        height: fit-content;
+    }
+
+    
 }
+

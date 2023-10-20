@@ -9,8 +9,13 @@ import { SpringbootComponent } from './springboot/springboot.component';
 import { Springboot2yrsComponent } from './springboot2yrs/springboot2yrs.component';
 import { FormsModule } from '@angular/forms';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +24,18 @@ import { HomepageComponent } from './homepage/homepage.component';
     CorejavaComponent,
     SpringbootComponent,
     Springboot2yrsComponent,
-    HomepageComponent
+    HomepageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

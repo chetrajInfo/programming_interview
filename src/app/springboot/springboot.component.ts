@@ -11,4 +11,11 @@ export class SpringbootComponent {
   toggleList() {
     this.isExpanded = !this.isExpanded;
   }
+
+
+  isDetailsOpen = false;
+
+  toggleDetails() {
+    this.isDetailsOpen = !this.isDetailsOpen;
+  }
 }

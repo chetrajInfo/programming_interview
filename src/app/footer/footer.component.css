@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.footer {
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  mat-toolbar {
+    justify-content: center;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .additional-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+.footer p{
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+.footer .additional-link:hover{
+   color: rgb(142, 84, 8);
+   font-weight: bold;
+}
+
+@media screen and (max-width:600px) {
+    .additional-link {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .footer p{
+        display: none;
+      }
+}
