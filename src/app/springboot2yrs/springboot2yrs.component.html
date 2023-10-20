@@ -1,9 +1,12 @@
 <div class="container">
   <div>
-    <label for="search">Search</label><input type="text" placeholder="QN"> 
+   <label for="">Search:</label> <input type="text" [(ngModel)]="searchInput" placeholder="QN" (keyup.enter)="goToQuestion()">
+   
   </div>
+  <div  [style.color]="'red'" >{{errorMessage}}</div>
     <ul>
-      <li *ngFor="let faq of faqs">
+      <li *ngFor="let faq of faqs; let i = index" [id]="'question-' + (i + 1)">
+
         <strong>{{ faq.question }}</strong> 
         <p [innerHTML]="faq.answer"></p> 
       </li>

@@ -7,6 +7,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { CorejavaComponent } from './corejava/corejava.component';
 import { SpringbootComponent } from './springboot/springboot.component';
 import { Springboot2yrsComponent } from './springboot2yrs/springboot2yrs.component';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

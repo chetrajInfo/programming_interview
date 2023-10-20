@@ -20,6 +20,7 @@ ul{
     box-shadow: 1px 1px 2px 2px rgb(243, 237, 226);
     border-radius: 9px;
     padding: 1em;
+    text-align: justify;
 }
 input[type="text"]{
     height: 33px;

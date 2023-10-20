@@ -41,3 +41,22 @@ ul li {
     margin-top: 3px;
     background: linear-gradient(90deg, #eaeaea, #f7f7f7, #eaeaea, #cfcfcf, #eaeaea);
 }
+
+@media  screen and (max-width:640px) {
+    
+    details{
+        padding: auto;
+      
+
+    }
+    ul{
+        display: flex;
+        gap: 1rem;
+        margin-top: 5px;
+    }
+
+    ul li{
+        padding: 0.3rem;
+        
+    }
+}

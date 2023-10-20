@@ -7,6 +7,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./springboot2yrs.component.css']
 })
 export class Springboot2yrsComponent implements OnInit {
+
+  searchInput: string = '';
+  errorMessage:string='';
+  
   faqs: { question: string, answer: string }[] = [];
 
   constructor(private dataService: DataService) {}
@@ -24,4 +28,15 @@ export class Springboot2yrsComponent implements OnInit {
     });
   }
   
+  goToQuestion(): void {
+    const questionElement = document.getElementById('question-' + this.searchInput);
+    if (questionElement) {
+        questionElement.scrollIntoView({ behavior: 'smooth' });
+        this.errorMessage ='';
+    }else{
+      this.errorMessage = "Question "+this.searchInput+" Does Not Exist.";
+    }
+    
+  }
+
 }
