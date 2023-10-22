@@ -37,7 +37,7 @@
     },
     {
         "q10":"Q10. How can you enable HTTPS in a Spring Boot web application?",
-        "a10":"Enabling HTTPS in Spring Boot can be done by: \n1. Obtaining an SSL certificate. \n2. Configuring Spring Boot's embedded Tomcat to use the certificate. \n3. Updating the application.properties or application.yml with the key-store path, password, and the type of key-store."
+        "a10":"Enabling HTTPS in Spring Boot can be done by: \n1. Obtaining an SSL certificate. \n2. Configuring Spring Boot's embedded Tomcat to use the certificate. \n3. Updating the application.properties or application.yml with the key-store path, password, and the type of key-store.\nSpring Boot allows you to specify the keystore in the application.properties with properties like <strong>server.ssl.key-store</strong>, <strong>server.ssl.key-store-password</strong>, etc. Once configured, Spring Boot will enforce SSL."
     },
     {
         "q11":"Q11. How does Spring Boot handle profile-specific properties?",
@@ -73,7 +73,7 @@
     },
     {
         "q19":"Q19. How can you handle exceptions in a Spring Boot RESTful web service?",
-        "a19":"Exceptions in Spring Boot RESTful web services can be handled using the @ControllerAdvice and @ExceptionHandler annotations. This allows you to define global exception handling logic that can return custom error responses."
+        "a19":"Exceptions in Spring Boot RESTful web services can be handled using the @ControllerAdvice and @ExceptionHandler annotations. This allows you to define global exception handling logic that can return custom error responses. For API responses, you can use ResponseEntityExceptionHandler to return standardized error responses."
     },
     {
         "q20":"Q20. What's the significance of the spring-boot-starter-parent in a Spring Boot project?",
@@ -90,7 +90,7 @@
         },
         {
           "q23": "Q23. How does Spring Boot handle logging?",
-          "a23": "Spring Boot uses Commons Logging for all its internal logging but leaves the underlying log implementation open. By default, if you use the Starters, Logback will be used for logging. You can also use other log implementations. Configuration can be handled via the application.properties or logback-spring.xml files."
+          "a23": "Spring Boot uses Commons Logging for all its internal logging but leaves the underlying log implementation open. By default, if you use the Starters, Logback will be used for logging. You can also use other log implementations. Configuration can be handled via the application.properties or logback-spring.xml files. Spring Boot provides default configurations for Java's Logging Framework, Logback. It outputs logs to the console and also provides a log file (spring.log) for file logging. You can customize logging by providing a logback-spring.xml or through properties in application.properties."
         },
         {
           "q24": "Q24. What are the health indicators in Spring Boot Actuator, and can you create a custom one?",
@@ -126,7 +126,7 @@
           },
           {
             "q32": "Q32. How can you create a custom @Endpoint in Spring Boot Actuator?",
-            "a32": "To create a custom endpoint, you can create a bean that's annotated with @Endpoint or @WebEndpoint and then define custom read or write operations using @ReadOperation or @WriteOperation annotations."
+            "a32": "To create custom endpoints, you can implement the Endpoint or WebEndpointExtension interface or you can create a bean that's annotated with @Endpoint or @WebEndpoint and then define custom read or write operations using @ReadOperation or @WriteOperation annotations."
           },
           {
             "q33": "Q33. Describe Spring Boot's opinionated view of application development.",

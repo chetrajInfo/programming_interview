@@ -105,6 +105,10 @@ label[for="info"]{
     border: 1px solid silver;
     padding: 1rem;
 }
+ .img-art-container  .img-art-int a{
+    color: black;
+    text-decoration: none;
+}
 .txt{
     font-size: 15px;
     font-family: cursive;
@@ -136,9 +140,15 @@ label[for="info"]{
 .video-container{
     padding:2rem;
 }
-
+.skill-set a{
+    color: blue;
+}
 ul li{
     line-height: 2rem;
+    
+}
+ul li a:visited{
+    color: blue;
 }
 
 @media screen and (max-width:800px) {

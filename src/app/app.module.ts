@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
+import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     SpringbootComponent,
     Springboot2yrsComponent,
     HomepageComponent,
-    FooterComponent
+    FooterComponent,
+    Springboot3yrsComponent
   ],
   imports: [
     BrowserModule,

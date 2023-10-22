@@ -1,0 +1,15 @@
+<div class="container">
+    <div>
+     <label for="">Search:</label> <input type="text" [(ngModel)]="searchInput" placeholder="QN" (keyup.enter)="goToQuestion()"> <br><br>
+      <h3>3 Years Of Experience</h3>
+    </div>
+    <div  [style.color]="'red'" >{{errorMessage}}</div>
+      <ul>
+        <li *ngFor="let faq of faqs; let i = index" [id]="'question-' + (i + 1)">
+  
+          <strong>{{ faq.question }}</strong> 
+          <p [innerHTML]="faq.answer"></p> 
+        </li>
+      </ul>
+    </div>
+    

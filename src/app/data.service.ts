@@ -9,9 +9,15 @@ export class DataService {
 
   private readonly apiUrl = 'assets/sprinboot2yrs.json';
 
+  private readonly springboot3yrsUrl = 'assets/springboot3yrs.json';
+
   constructor(private http: HttpClient) {}
 
   getFaqs(): Observable<any> {
     return this.http.get(this.apiUrl);
+  }
+
+  getSpringTwoYrs():Observable<any>{
+    return this.http.get(this.springboot3yrsUrl);
   }
 }
