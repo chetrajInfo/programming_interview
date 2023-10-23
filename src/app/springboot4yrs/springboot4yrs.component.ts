@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-springboot3yrs',
-  templateUrl: './springboot3yrs.component.html',
-  styleUrls: ['./springboot3yrs.component.css']
+  selector: 'app-springboot4yrs',
+  templateUrl: './springboot4yrs.component.html',
+  styleUrls: ['./springboot4yrs.component.css']
 })
-export class Springboot3yrsComponent implements OnInit {
+export class Springboot4yrsComponent implements OnInit {
 
 
   searchInput:string =''
@@ -16,7 +16,7 @@ export class Springboot3yrsComponent implements OnInit {
   faqs: {question : string, answer:string}[]=[]
 
   ngOnInit(): void {
-    this.dataService.getSpringThreeYrs().subscribe(data => {
+    this.dataService.getSpringFourYrs().subscribe(data => {
       for (const item of data) {
         let question = item[`q${data.indexOf(item) + 1}`];
         let answer = item[`a${data.indexOf(item) + 1}`];

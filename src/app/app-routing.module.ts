@@ -5,6 +5,7 @@ import { Springboot2yrsComponent } from './springboot2yrs/springboot2yrs.compone
 import { HomepageComponent } from './homepage/homepage.component';
 
 import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.component';
+import { Springboot4yrsComponent } from './springboot4yrs/springboot4yrs.component';
 
 const routes: Routes = [
     // Redirect default route to 'home' route
@@ -31,6 +32,16 @@ const routes: Routes = [
       {
         path: '3yrs',
         component:Springboot3yrsComponent
+      }
+    ]
+  },
+  {
+    path: 'springboot',
+    component:Springboot4yrsComponent,
+    children: [
+      {
+        path: '4yrs',
+        component:Springboot4yrsComponent
       }
     ]
   }

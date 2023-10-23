@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.component';
+import { Springboot4yrsComponent } from './springboot4yrs/springboot4yrs.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.compone
     Springboot2yrsComponent,
     HomepageComponent,
     FooterComponent,
-    Springboot3yrsComponent
+    Springboot3yrsComponent,
+    Springboot4yrsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,13 @@ import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.compone
 
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
