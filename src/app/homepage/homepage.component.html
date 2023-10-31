@@ -3,10 +3,10 @@
   </section>
   
 <div class="img-row">
-<img src="./assets/corejava.png" alt="Core Java">
-<img src="./assets/mysql.png" alt="Spring">
-<img src="./assets/springboot.png" alt="Springboot">
-<img src="./assets/mongodb.jpg" alt="Springboot">
+<a href="https://docs.oracle.com/en/java/" target="_blank"><img src="./assets/corejava.png" alt="Core Java"></a>
+<a href="https://dev.mysql.com/doc/" target="_blank"><img src="./assets/mysql.png" alt="Spring"></a>
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#documentation" target="_blank"><img src="./assets/springboot.png" alt="Springboot"></a>
+<a href="https://www.mongodb.com/docs/" target="_blank"><img src="./assets/mongodb.jpg" alt="MongoDB"></a>
 </div>
 
 <article>
@@ -16,16 +16,16 @@
 
 <article>
     <h3>
-        Question here are compnay standard that will help you<br>
+        Question here are company standard that will help you<br>
         to lend your dream Job.
     </h3>
    
 </article>
 
     <div class="btn-info">
-        <button>Courses</button> 
-        <button>Blog</button>
-        <button>Resources</button>
+        <button (click)="getCourse()">Courses</button> 
+        <button (click)="getBlog()">Blog</button>
+        <button (click)="getResources()">Resources</button>
     </div>
 <div class="img-fanng">
     <img src="./assets/fanng.jpg" alt="FAANG Logo">

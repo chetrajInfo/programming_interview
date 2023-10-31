@@ -21,4 +21,15 @@ export class HomepageComponent implements OnInit {
     
   }
 
+  getCourse():void{
+       //do something code here 
+  }
+
+  getBlog():void{
+      //do something code here
+  }
+  getResources():void{
+       window.open("https://onesolution.web.app/","target:_blank")
+  }
+
 }
