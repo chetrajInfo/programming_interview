@@ -31,8 +31,11 @@ header{
     font-size: clamp(1em, 2vw, 1.1em);
     font-weight: bold;
     cursor: pointer;
-
 }
+.head-element div:hover{
+    color: rgb(239, 162, 67);
+}
+
 
 .ava-qa{
     line-height: 1.9rem;

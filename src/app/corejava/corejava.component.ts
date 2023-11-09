@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class CorejavaComponent {
 
+  isExpanded = false;
+
+  toggleList() {
+    this.isExpanded = !this.isExpanded;
+  }
+
+
+  isDetailsOpen = false;
+
+  toggleDetails() {
+    this.isDetailsOpen = !this.isDetailsOpen;
+  }
+
 }

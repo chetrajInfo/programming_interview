@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-springboot2yrs',
-  templateUrl: './springboot2yrs.component.html',
-  styleUrls: ['./springboot2yrs.component.css']
+  selector: 'app-corejava2yrs',
+  templateUrl: './corejava2yrs.component.html',
+  styleUrls: ['./corejava2yrs.component.css']
 })
-export class Springboot2yrsComponent implements OnInit {
+export class Corejava2yrsComponent implements OnInit {
 
   searchInput: string = '';
   errorMessage:string='';
@@ -16,7 +16,7 @@ export class Springboot2yrsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getSpringTwoYrs().subscribe(data => {
+    this.dataService.getCoreJavaTwoYrs().subscribe(data => {
       for (const item of data) {
         let question = item[`q${data.indexOf(item) + 1}`];
         let answer = item[`a${data.indexOf(item) + 1}`];

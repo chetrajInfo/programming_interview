@@ -7,15 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
+  private readonly artSpeaking = 'assets/artspeaking.json';
+
   private readonly apiUrl = 'assets/sprinboot2yrs.json';
 
   private readonly springboot3yrsUrl = 'assets/springboot3yrs.json';
 
   private readonly springboot4yrsUrl = 'assets/springboot4yrs.json';
 
+  private readonly corejava2yrsUrl = 'assets/corejava2yrs.json';
+
   constructor(private http: HttpClient) {}
 
-  getFaqs(): Observable<any> {
+  getArtOfSpeaking():Observable<any>{
+    return this.http.get(this.artSpeaking);
+  }
+
+  getSpringTwoYrs(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
@@ -26,5 +34,9 @@ export class DataService {
   
   getSpringFourYrs():Observable<any>{
     return this.http.get(this.springboot4yrsUrl);
+  }
+
+  getCoreJavaTwoYrs():Observable<any>{
+    return this.http.get(this.corejava2yrsUrl);
   }
 }

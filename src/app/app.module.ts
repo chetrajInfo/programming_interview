@@ -19,6 +19,9 @@ import { FooterComponent } from './footer/footer.component';
 import { Springboot3yrsComponent } from './springboot3yrs/springboot3yrs.component';
 import { Springboot4yrsComponent } from './springboot4yrs/springboot4yrs.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { Corejava2yrsComponent } from './corejava2yrs/corejava2yrs.component';
+import { TechnonewsComponent } from './technonews/technonews.component';
+import { ArtofspeakingComponent } from './artofspeaking/artofspeaking.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HomepageComponent,
     FooterComponent,
     Springboot3yrsComponent,
-    Springboot4yrsComponent
+    Springboot4yrsComponent,
+    Corejava2yrsComponent,
+    TechnonewsComponent,
+    ArtofspeakingComponent
   ],
   imports: [
     BrowserModule,

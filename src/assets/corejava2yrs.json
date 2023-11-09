@@ -1,4 +1,211 @@
 [
-    {},
-    {}
+    {
+        "q1": "Q1. Explain the difference between `ArrayList` and `LinkedList` in Java.",
+        "a1": "`ArrayList` uses dynamic arrays to store elements, while `LinkedList` uses a doubly linked list. `ArrayList` is faster for random access as it allows direct access to elements, while `LinkedList` has to traverse the list. `LinkedList` is faster in adding or removing elements because it only needs to update the next and previous references, whereas `ArrayList` may need to shift elements."
+    },
+    {
+        "q2": "Q2. What is the difference between `==` and `equals()` in Java?",
+        "a2": "`==` compares memory locations, checking if two references point to the exact same object. `equals()` is a method to compare the contents of two objects. The default implementation in `Object` class compares memory locations, but it can be overridden to perform custom comparisons."
+    },
+    {
+        "q3": "Q3. What is the Java Collections Framework?",
+        "a3": "The Java Collections Framework is a set of classes and interfaces that provide robust and efficient data structures and algorithms for handling and manipulating collections, such as lists, sets, queues, and maps."
+    },
+    {
+        "q4": "Q4. What are Exception Handling and its types in Java?",
+        "a4": "Exception Handling in Java is a mechanism to handle runtime errors, ensuring the normal flow of the application. There are two types of exceptions: **Checked Exceptions:** These are exceptions that need to be explicitly caught or thrown, e.g., `IOException`. **Unchecked Exceptions:** These are exceptions that occur at runtime and aren't required to be caught or thrown, e.g., `ArithmeticException`."
+    },
+    {
+        "q5": "Q5. Explain the concept of `final`, `finally`, and `finalize` in Java.",
+        "a5": "`final`: It's a keyword used to restrict modification. It can be used with variables (making them constants), methods (making them non-overridable), and classes (making them non-inheritable). `finally`: It's a block associated with a `try-catch` that always executes, regardless of whether an exception occurs. `finalize`: It's a method in `Object` class which gets called by Garbage Collector before the object is destroyed, allowing any cleanup operations."
+    },
+    {
+        "q6": "Q6. What is the role of `hashCode()` and `equals()` in Java?",
+        "a6": "`hashCode()` and `equals()` methods are used in objects that are used in collections like `HashMap`, `HashSet`, etc. `hashCode()`: It returns an integer hash code representing the object. `equals()`: It checks if two objects are equal. To maintain consistency, if two objects are equal according to `equals()`, their `hashCode()` must also be the same."
+    },
+    {
+        "q7": "Q7. What are `public`, `private`, `protected`, and default access modifiers in Java?",
+        "a7": "`public`: The member is accessible from any other class. `private`: The member is accessible only within its own class. `protected`: The member is accessible within its class, package, and by subclasses. default (no modifier): The member is accessible only within its package."
+    },
+    {
+        "q8": "Q8. Explain the concepts of `interface` and `abstract class` in Java.",
+        "a8": "`interface`: It's a blueprint of a class that may contain only constants and abstract methods. Interfaces support multiple inheritances. `abstract class`: It's a class that cannot be instantiated and can have both abstract (method declaration without implementation) and concrete methods. It is used to share common logic among several closely related classes."
+    },
+    {
+        "q9": "Q9. What is the purpose of `toString()` method in Java?",
+        "a9": "The `toString()` method returns a string representation of an object. By default, it returns the class name followed by '@' and the object's hash code. It's often overridden to provide a meaningful description of the object."
+    },
+    {
+        "q10": "Q10. How does the `try-with-resources` statement work in Java?",
+        "a10": "`try-with-resources` is a try statement that declares one or more resources. A resource is an object that must be closed after the program finishes using it, such as a `FileInputStream` or `Connection`. The try-with-resources statement ensures that each resource is closed at the end of the statement, reducing boilerplate code."
+    },
+    {
+        "q11": "Q11. What is the difference between StringBuilder and StringBuffer in Java?",
+        "a11": "Both StringBuilder and StringBuffer are mutable sequences of characters that can be modified. The main difference is that StringBuffer is thread-safe and synchronized, while StringBuilder is not. As a result, StringBuilder is usually faster and should be used when thread safety is not a concern."
+    },
+    {
+        "q12": "Q12. How does Java implement multiple inheritance?",
+        "a12": "Java does not support multiple inheritance through classes to avoid ambiguity and complexity. Instead, it uses interfaces to achieve multiple inheritance. A class can implement multiple interfaces, allowing it to inherit behavior from multiple sources."
+    },
+    {
+        "q13": "Q13. What is the difference between break and continue statements in Java?",
+        "a13": "break: When used inside a loop or switch statement, it terminates the loop or switch block and control is transferred to the statement following the block. continue: It skips the rest of the current iteration and jumps to the next iteration of the loop."
+    },
+    {
+        "q14": "Q14. What is the purpose of this keyword in Java?",
+        "a14": "The this keyword in Java is a reference variable that refers to the current object. It can be used to differentiate instance variables from local variables when they have the same name, invoke the current object's method, pass the current object as a parameter to other methods, and invoke the current object's constructor."
+    },
+    {
+        "q15": "Q15. Explain the concept of autoboxing and unboxing in Java.",
+        "a15": "Autoboxing and unboxing are mechanisms in Java that automatically convert primitive data types to their corresponding wrapper classes and vice versa. For example, converting an int to an Integer (autoboxing) and an Integer to an int (unboxing)."
+    },
+    {
+        "q16": "Q16. How does the switch statement work in Java?",
+        "a16": "The switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being tested is checked for each case. If a match is found, the block of code corresponding to that case is executed."
+    },
+    {
+        "q17": "Q17. What is the super keyword and how is it used in Java?",
+        "a17": "The super keyword in Java is a reference variable used to refer to the immediate parent class object. It can be used to invoke the parent class methods, access the parent class fields, and invoke the parent class constructor."
+    },
+    {
+        "q18": "Q18. Explain method overloading and method overriding in Java.",
+        "a18": "Method Overloading: It occurs within the same class when two or more methods have the same name but different parameters (different type, number, or both). It is a compile-time concept. Method Overriding: It occurs in two classes with an inheritance relationship when a subclass provides a specific implementation for a method that is already defined in its superclass. It is a runtime concept."
+    },
+    {
+        "q19": "Q19. How can we create a thread in Java?",
+        "a19": "There are two main ways to create a thread in Java: 1. Extending the Thread class: Define a new class that extends Thread and overrides its run() method. Create an object of the class and call its start() method. 2. Implementing the Runnable interface: Define a new class that implements Runnable and overrides its run() method. Pass an instance of the class to a Thread object and call the start() method."
+    },
+    {
+        "q20": "Q20. Explain the concept of type casting in Java.",
+        "a20": "Type casting in Java refers to converting a variable from one data type to another. There are two types of casting: Implicit Casting (Widening): Automatically done by Java when converting a smaller type to a larger type (e.g., int to float). There's no loss of information. Explicit Casting (Narrowing): Must be done manually by placing the type in parentheses. It can lead to loss of information (e.g., float to int)."
+    },
+    
+        {
+            "q21": "Q21. What is a static keyword in Java?",
+            "a21": "The static keyword in Java is used to indicate that a variable or method belongs to the class rather than to an instance of the class. Static variables are shared among all instances of a class, and static methods can be invoked without creating an instance of the class."
+        },
+        {
+            "q22": "Q22. How do you handle memory leaks in Java?",
+            "a22": "Java has an automatic garbage collector, but memory leaks can still occur. To handle them: Use tools like VisualVM, Eclipse Memory Analyzer, etc., to analyze heap dumps and identify leaks. Properly close resources such as files, sockets, and database connections. Be cautious with static fields, as they can hold objects in memory for a long time. Use WeakReferences for caches. Remove unnecessary listeners or callbacks."
+        },
+        {
+            "q23": "Q23. Explain the default keyword in interfaces.",
+            "a23": "From Java 8 onwards, interfaces can have method implementations with the use of the default keyword. Default methods enable interfaces to have methods with an implementation without affecting the classes that already use the interface."
+        },
+        {
+            "q24": "Q24. What are enum types in Java?",
+            "a24": "enum in Java is a special data type that represents a group of constants. It is a way to define a class that consists of fixed, static constant values. Enums can be used in switch statements and provide type safety."
+        },
+        {
+            "q25": "Q25. What is the Observer design pattern?",
+            "a25": "The Observer pattern is a behavioral design pattern where an object, known as the subject, maintains a list of its dependents, known as observers, that need to be notified of any changes in the subject's state. In Java, it can be implemented using the Observable class and the Observer interface."
+        },
+        {
+            "q26": "Q26. What is the Singleton design pattern?",
+            "a26": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This can be achieved in Java by making the constructor private, creating a static instance variable, and providing a static method to return the instance."
+        },
+        {
+            "q27": "Q27. What is the Factory design pattern?",
+            "a27": "The Factory pattern is a creational design pattern that provides an interface to create objects in a superclass but allows subclasses to alter the type of objects that will be created."
+        },
+        {
+            "q28": "Q28. What is the Proxy design pattern?",
+            "a28": "The Proxy pattern is a structural design pattern where a surrogate or placeholder object controls access to another object. This can be useful for implementing lazy initialization, access control, logging, and monitoring operations."
+        },
+        {
+            "q29": "Q29. What is the difference between throw and throws in Java?",
+            "a29": "throw: It is used to explicitly throw an exception from a method or any block of code. throws: It is used in the method signature to declare the exceptions that a method might throw."
+        },
+        {
+            "q30": "Q30. What is the volatile keyword in Java?",
+            "a30": "The volatile keyword in Java is used to indicate that a variable's value may be changed by multiple threads simultaneously. It ensures that all reads and writes to the variable are done directly from and to the main memory, ensuring that changes made by one thread are immediately visible to other threads."
+        },
+        
+            {
+                "q31": "Q31. How does the synchronized keyword work in Java?",
+                "a31": "The synchronized keyword in Java ensures that only one thread can access a synchronized method or block at a time. This is used to achieve thread safety and prevent race conditions by making sure that the shared resource is accessed sequentially."
+            },
+            {
+                "q32": "Q32. What is the purpose of the transient keyword in Java?",
+                "a32": "The transient keyword in Java is used to declare that a field should not be serialized. When an object is serialized, the values of transient fields are ignored and not included in the serialized output."
+            },
+            {
+                "q33": "Q33. What is a lambda expression and how can it be used in Java?",
+                "a33": "Introduced in Java 8, a lambda expression is a concise way to represent an anonymous function (a function without a name). It can be used primarily to define the implementation of a functional interface. Lambda expressions can be used to make code more readable and to use functional programming patterns."
+            },
+            {
+                "q34": "Q34. What is the difference between Stream.map() and Stream.flatMap() in Java?",
+                "a34": "Stream.map() transforms each element of the stream using a function. Stream.flatMap() transforms each element into zero or more elements by flattening it. It's useful when each element in a stream can be mapped to multiple elements or none."
+            },
+            {
+                "q35": "Q35. Explain the concept of Java Reflection API.",
+                "a35": "Java Reflection API allows inspection and manipulation of class attributes at runtime. It provides the ability to analyze and modify runtime behavior of applications. With Reflection, it is possible to get class information, construct an object of a class, examine and modify the runtime behavior of fields, methods, and classes."
+            },
+            {
+                "q36": "Q36. What is the instanceof keyword in Java?",
+                "a36": "The instanceof keyword in Java is used to test whether an object is an instance of a particular class or interface. It returns a boolean value."
+            },
+            {
+                "q37": "Q37. How can you make a class immutable in Java?",
+                "a37": "To make a class immutable in Java: Make the class final so it can’t be extended. Make all fields private and final. Don’t provide setter methods. Ensure deep copies in constructors and methods if necessary."
+            },
+            {
+                "q38": "Q38. What is the Contract of hashCode() and equals() methods?",
+                "a38": "The contract between hashCode() and equals() in Java states that: If two objects are equal, as determined by equals(), then they must have the same hashCode(). If two objects have the same hashCode(), they are not required to be equal."
+            },
+            {
+                "q39": "Q39. What is method overloading?",
+                "a39": "Method overloading in Java occurs when two or more methods in a class have the same name but different parameters in terms of type, sequence, or number. It allows a class to have multiple methods with the same name but with a different signature."
+            },
+            {
+                "q40": "Q40. What is the purpose of the package keyword in Java?",
+                "a40": "The package keyword in Java is used to declare a namespace that encapsulates a group of related classes, interfaces, enumerations, and annotations. Using packages, you can avoid name conflicts and also modularize code for better maintainability."
+            },
+
+                {
+                    "q41": "Q41. What are Annotations in Java?",
+                    "a41": "Annotations are metadata or data about data. In Java, they provide information about a class, method, variable, parameter, or package. Annotations are used to generate code, inform the compiler about intended checks, enhance code readability, and enable runtime processing."
+                },
+                {
+                    "q42": "Q42. Explain the concept of Generics in Java.",
+                    "a42": "Generics allow you to write classes, interfaces, and methods that work with different data types while still providing type safety. With Generics, you can create classes, interfaces, and methods in which the type of data upon which they operate is specified as a parameter."
+                },
+                {
+                    "q43": "Q43. What is the purpose of try-with-resources in Java?",
+                    "a43": "The try-with-resources statement in Java is used to automatically close resources such as files, sockets, or database connections when the try block finishes, either normally or because of an exception. Any object that implements java.lang.AutoCloseable or java.io.Closeable can be used as a resource."
+                },
+                {
+                    "q44": "Q44. What is the diamond problem in inheritance and how does Java solve it?",
+                    "a44": "The diamond problem occurs in languages that support multiple inheritance, leading to ambiguity when a method is invoked as it could be inherited from multiple ancestor classes. Java solves this by not allowing multiple inheritance for classes. Interfaces, however, can be used to achieve multiple inheritance without causing the diamond problem."
+                },
+                {
+                    "q45": "Q45. What is a ClassLoader in Java?",
+                    "a45": "The ClassLoader in Java is a part of the Java Runtime Environment that dynamically loads Java classes into the JVM. Classes are only loaded by the ClassLoader when they are required by the program."
+                },
+                {
+                    "q46": "Q46. What is a Nested Class? Explain different types of nested classes.",
+                    "a46": "A Nested Class is a class that is defined within another class. There are four types of nested classes: Static Nested Class, Inner Class, Local Inner Class, and Anonymous Inner Class."
+                },
+                {
+                    "q47": "Q47. What is the assert keyword in Java?",
+                    "a47": "The assert keyword is used for debugging purposes. When an assert statement is encountered and the condition is false, an AssertionError is thrown. If the condition is true, the program continues executing normally."
+                },
+                {
+                    "q48": "Q48. What is the difference between ArrayList and LinkedList?",
+                    "a48": "ArrayList uses a dynamic array to store elements, offering constant-time access but takes O(n) time for insertion and deletion. LinkedList uses a doubly linked list, offering O(1) time for insertion and deletion but takes O(n) time for access."
+                },
+                {
+                    "q49": "Q49. What is a functional interface?",
+                    "a49": "A functional interface is an interface that contains exactly one abstract method. It may contain multiple default or static methods. Functional interfaces can be annotated with @FunctionalInterface, which helps to catch errors during compile time."
+                },
+                {
+                    "q50": "Q50. What is the difference between Comparable and Comparator interfaces in Java?",
+                    "a50": "Comparable is used to define the natural ordering of objects by implementing the compareTo() method. Comparator defines custom ordering for objects through a separate class implementing the Comparator interface."
+                }
+            
+            
+        
+        
+    
+    
 ]

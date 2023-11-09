@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.art-speak{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4rem;
+    padding: 3rem;
+}
+li{
+    margin-top: 1.5rem;
+    list-style: none;
+    font-size: clamp(0.8em, 2vw, 1.0em);
+}
+p{
+    font-size: clamp(0.9em, 2vw, 1.2em);
+}
+hr{
+    margin-top: 0.6em;
+    height: 2px;
+}

@@ -1,0 +1,19 @@
+<div class="art-speak">
+<p>   
+The art of speaking, or rhetoric, is a skill that involves effective communication and persuasive speech. <br>
+It has been studied and practiced for centuries, with roots tracing back to ancient Greece. Here are some elements and tips that can enhance the art of speaking:
+</p>
+<div>
+    <ul>
+        <li *ngFor="let topic of topics">
+            <h2 style="color: green;"> {{topic.head}} </h2>
+            <p [innerHTML]="topic.content"></p><br>
+            <p [innerHTML]="topic.scenario"></p>
+            <hr>
+        </li>
+      
+    </ul>
+   
+
+</div>
+</div>
