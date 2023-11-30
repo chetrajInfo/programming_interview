@@ -1,0 +1,122 @@
+[
+    {
+        "q1": "Q1. Explain the Java Memory Model and memory management in the JVM.",
+        "a1": "The Java Memory Model defines how threads interact through memory and ensures visibility of changes to variables across threads. Memory management in the JVM is handled through different regions like Heap, Stack, Code, Permanent Generation (PermGen) or Metaspace, and Runtime Constant Pool. The JVM uses Garbage Collection to automatically manage memory, reclaiming memory used by objects that are no longer reachable in the program."
+    },
+    {
+        "q2": "Q2. How does the ClassLoader work in Java, and what are its types?",
+        "a2": "The ClassLoader in Java loads class files into the JVM at runtime. There are three primary types: Bootstrap ClassLoader, Extension ClassLoader, and System/Application ClassLoader."
+    },
+    {
+        "q3": "Q3. Discuss the changes introduced in Java 8.",
+        "a3": "Java 8 introduced several major features: Lambda Expressions, Streams API, Default Methods, New Date and Time API, Optional, Nashorn JavaScript Engine."
+    },
+    {
+        "q4": "Q4. What is the volatile keyword, and how does it relate to the Java Memory Model?",
+        "a4": "The volatile keyword in Java ensures that every read of a volatile variable is read from the main memory, and not from the CPU cache, and every write to a volatile variable is written to main memory, and not just to the CPU cache. It is used to ensure that reads and writes to a variable are atomic and visible to all threads as per the Java Memory Model."
+    },
+    {
+        "q5": "Q5. Explain method references in Java 8.",
+        "a5": "Method references are a shorthand notation of a lambda expression to call a method. They are more concise and can be used wherever a lambda expression can be used."
+    },
+    {
+        "q6": "Q6. How would you diagnose and troubleshoot a performance problem in a Java application?",
+        "a6": "To troubleshoot performance issues, one should profile the application, analyze heap dumps to find memory leaks, monitor garbage collection logs, and check thread dumps to diagnose synchronization issues or deadlocks."
+    },
+    {
+        "q7": "Q7. What is the purpose of the transient keyword in Java serialization?",
+        "a7": "The transient keyword is used to indicate that a field should not be serialized. Fields marked as transient will not be included in the serialized state of an object."
+    },
+    {
+        "q8": "Q8. What are some best practices for exception handling in Java?",
+        "a8": "Best practices for exception handling in Java include using specific exceptions for different error cases, avoiding using exceptions for control flow, not catching Throwable, Error, or RuntimeException unless necessary, cleaning up resources after handling exceptions, and documenting the exceptions thrown by a method."
+    },
+    {
+        "q9": "Q9. How would you implement object pooling in Java?",
+        "a9": "Object pooling in Java can be implemented using the ObjectPool pattern, and Apache Commons Pool provides a generic object pooling mechanism. You can create a pool by extending BasePoolableObjectFactory to manage the lifecycle of pooled objects."
+    },
+    {
+        "q10": "Q10. Explain the difference between Checked and Unchecked Exceptions.",
+        "a10": "Checked Exceptions are those that the programmer should handle through code, and they are checked at compile-time, such as IOException, SQLException. Unchecked Exceptions, or Runtime Exceptions, are not checked at compile-time and do not need to be explicitly handled in the code."
+    },
+    {
+        "q11": "Q11. How do you manage concurrency in a Java application without using the synchronized keyword?",
+        "a11": "Concurrency can be managed using various classes from the java.util.concurrent package, such as ReentrantLock, Semaphore, CountDownLatch, CyclicBarrier, ReadWriteLock, and atomic variables like AtomicInteger. These provide more flexibility and finer-grained control over thread coordination than synchronized blocks or methods."
+    },
+    {
+        "q12": "Q12. What is type erasure in Java generics?",
+        "a12": "Type erasure is a process where the Java compiler replaces all generic parameters with their bounds or Object if the type parameter is unbounded. This ensures backward compatibility with Java code written before generics were introduced. At runtime, generic types are thus treated as Object, and the generic type information is not preserved."
+    },
+    {
+        "q13": "Q13. Describe the Double-Checked Locking idiom for lazy initialization of a singleton instance.",
+        "a13": "Double-Checked Locking is an idiom used to reduce the overhead of acquiring a lock by first checking the value of the instance without locking, then synchronizing a block and checking again before initializing the instance. It's a complex pattern that can introduce subtle bugs if not implemented correctly in Java. Since Java 5, the volatile keyword ensures proper handling of double-checked locking."
+    },
+    {
+        "q14": "Q14. How does Java handle integer overflow and underflow?",
+        "a14": "Java does not throw an exception on integer overflow or underflow. Instead, it wraps around using two's complement arithmetic for integers. Developers need to be aware of this to avoid subtle bugs and can manually check for overflow/underflow conditions if necessary."
+    },
+    {
+        "q15": "Q15. Explain the difference between SoftReference, WeakReference, and PhantomReference in Java.",
+        "a15": "SoftReference objects are collected at the discretion of the garbage collector in response to memory demand. WeakReference objects do not prevent their referents from being made finalizable, finalized, and then reclaimed. PhantomReference objects are enqueued after the collector determines that their referents may otherwise be reclaimed."
+    },
+    {
+        "q16": "Q16. What is the purpose of the @SafeVarargs annotation?",
+        "a16": "The @SafeVarargs annotation is used to suppress unchecked warnings on methods or constructors with a variable number of arguments (varargs) that are generic. It assures the compiler that the code does not perform unsafe operations on its varargs parameter."
+    },
+    {
+        "q17": "Q17. Discuss the fork/join framework in Java.",
+        "a17": "The fork/join framework introduced in Java 7 is designed for parallel processing by breaking a task into smaller tasks recursively until the task is simple enough to be solved directly. It uses a work-stealing algorithm to utilize all available CPU cores for maximum throughput."
+    },
+    {
+        "q18": "Q18. How can you create an immutable collection in Java?",
+        "a18": "Immutable collections can be created using the List.of(), Set.of(), and Map.of() factory methods. Before Java 9, collections could be made unmodifiable by wrapping them with Collections.unmodifiableList/Set/Map methods, but they were not truly immutable."
+    },
+    {
+        "q19": "Q19. What is method inlining in the context of JVM?",
+        "a69": "Method inlining is an optimization technique where the JVM replaces a method call with the actual code of the method. This reduces the overhead of the method call and can lead to further optimizations. The JIT (Just-In-Time) compiler typically performs this optimization."
+    },
+    {
+        "q20": "Q20. Explain the difference between a daemon thread and a user thread in Java.",
+        "a20": "A daemon thread is a low-priority thread that runs in the background to perform tasks such as garbage collection and doesn't prevent the JVM from exiting when all user threads finish their execution. A user thread is designed to execute user-defined tasks, and the JVM will not terminate until all user threads have completed their execution."
+    },
+    {
+        "q21": "Q21. Explain the difference between fail-fast and fail-safe iterators in Java.",
+        "a21": "Fail-fast iterators operate directly on the collection and can throw a ConcurrentModificationException if the collection is structurally modified during iteration. Fail-safe iterators work on a copy of the collection, so they do not throw any exceptions if the collection is modified while iterating."
+    },
+    {
+        "q22": "Q22. Can you give an example of a memory leak in Java?",
+        "a22": "An example of a memory leak in Java could be a static collection like a HashMap that keeps growing with entries that are never removed, eventually leading to an OutOfMemoryError if the entries are not properly managed."
+    },
+    {
+        "q23": "Q23. What are the major changes in the Java Collections API in Java 8?",
+        "a23": "Java 8 introduced enhancements to the Collections API such as the forEach() method, stream() method to create streams, and new methods like removeIf(), replaceAll(), and sort() for bulk operations."
+    },
+    {
+        "q24": "Q24. How do you ensure that a Java application is thread-safe?",
+        "a24": "To ensure thread safety in Java, use synchronization where necessary, employ thread-safe collections from the java.util.concurrent package, minimize shared mutable state, use immutable objects, and follow best practices for concurrent programming."
+    },
+    {
+        "q25": "Q25. What is the purpose of the static keyword in method and variable declarations?",
+        "a25": "The static keyword is used to indicate that the method or variable belongs to the class, rather than instances of the class, allowing them to be accessed directly on the class without creating an instance."
+    },
+    {
+        "q26": "Q26. Explain the volatile keyword and its impact on the Java Memory Model.",
+        "a26": "The volatile keyword ensures that a variable is read from and written to main memory, making sure that changes to the variable are visible to all threads and operations on the variable are atomic according to the Java Memory Model."
+    },
+    {
+        "q27": "Q27. Describe the process of object serialization and deserialization in Java.",
+        "a27": "Object serialization is converting an object into a byte stream for storage or transmission. Deserialization is rebuilding the object from the byte stream. This is facilitated by the ObjectOutputStream and ObjectInputStream classes."
+    },
+    {
+        "q28": "Q28. Explain the use of the native keyword in Java.",
+        "a28": "The native keyword declares a method that is implemented in native code using languages such as C or C++. It allows Java to call functions and access libraries outside of the Java environment."
+    },
+    {
+        "q29": "Q29. What is a ThreadLocal variable in Java?",
+        "a29": "ThreadLocal variables in Java provide thread-local storage, where each thread accessing the variable has its own, independently initialized copy, thus providing thread confinement for the data."
+    },
+    {
+        "q30": "Q30. How does the Optional class prevent NullPointerException in Java?",
+        "a30": "The Optional class encapsulates a value that may be present or absent, providing methods to handle the absence of a value without resorting to null references, thereby helping to prevent NullPointerException."
+    }
+]

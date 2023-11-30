@@ -10,6 +10,7 @@ import { CorejavaComponent } from './corejava/corejava.component';
 import { Corejava2yrsComponent } from './corejava2yrs/corejava2yrs.component';
 import { TechnonewsComponent } from './technonews/technonews.component';
 import { ArtofspeakingComponent } from './artofspeaking/artofspeaking.component';
+import { Corejava4yrsComponent } from './corejava4yrs/corejava4yrs.component';
 
 const routes: Routes = [
     // Redirect default route to 'home' route
@@ -34,6 +35,17 @@ const routes: Routes = [
         component:Corejava2yrsComponent
        }
     ]
+  },
+
+  {
+     path:'corejava',
+     component:Corejava4yrsComponent,
+     children:[
+      {
+        path:'4yrs',
+        component:Corejava4yrsComponent
+      }
+     ]
   },
 
   {

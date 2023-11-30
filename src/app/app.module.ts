@@ -22,6 +22,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { Corejava2yrsComponent } from './corejava2yrs/corejava2yrs.component';
 import { TechnonewsComponent } from './technonews/technonews.component';
 import { ArtofspeakingComponent } from './artofspeaking/artofspeaking.component';
+import { Corejava4yrsComponent } from './corejava4yrs/corejava4yrs.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ArtofspeakingComponent } from './artofspeaking/artofspeaking.component'
     Springboot4yrsComponent,
     Corejava2yrsComponent,
     TechnonewsComponent,
-    ArtofspeakingComponent
+    ArtofspeakingComponent,
+    Corejava4yrsComponent
   ],
   imports: [
     BrowserModule,

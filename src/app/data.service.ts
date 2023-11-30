@@ -17,6 +17,8 @@ export class DataService {
 
   private readonly corejava2yrsUrl = 'assets/corejava2yrs.json';
 
+  private readonly corejava4yrsUrl = 'assets/corejava4yrs.json';
+
   constructor(private http: HttpClient) {}
 
   getArtOfSpeaking():Observable<any>{
@@ -38,5 +40,9 @@ export class DataService {
 
   getCoreJavaTwoYrs():Observable<any>{
     return this.http.get(this.corejava2yrsUrl);
+  }
+
+  getCoreJavaFourYrs():Observable<any>{
+    return this.http.get(this.corejava4yrsUrl);
   }
 }
